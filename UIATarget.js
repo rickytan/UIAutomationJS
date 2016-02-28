@@ -199,7 +199,6 @@ UIATarget.prototype = {
      * @param {(Rect|Point)} fromPointObject - The rect or point from which the drag action is to begin.
      * @param {(Rect|Point)} toPointObject - The rect or point at which the drag action is to end.
      * @param {Number} duration - The length of time, in seconds, between starting and stopping the gesture.
-     * @returns
      */
     dragFromToForDuration: function (fromPointObject, toPointObject, duration) {
     },
@@ -251,7 +250,6 @@ UIATarget.prototype = {
      * * rotation. The length of rotation in radians. The default is pi (π).
      * * touchCount. The number of touches to use in the specified gesture (effectively, the number of fingers a user
      * would use to make the specified gesture.) Valid values are 1 to 5. The default is 2.
-     * @returns {undefined}
      */
     rotateWithOptions: function (location, options) {
     },
@@ -323,7 +321,7 @@ UIATarget.prototype = {
         return 0.0;
     },
     /**
-     * Delays script execution for the specified time.
+     * Delays script **execution** for the specified time.
      * @param {Number} timeInterval - The time to delay, in seconds.
      * @returns {Boolean}
      */
