@@ -10,7 +10,7 @@ UIAPicker.prototype = UIAElement.prototype;
 
 /**
  * Returns an array representing the wheels of the specified picker.
- * @returns {UIAElementArray}
+ * @returns {UIAElementArray.<UIAPickerWheel>}
  */
 UIAPicker.prototype.wheels = function() {
     return new UIAElementArray;

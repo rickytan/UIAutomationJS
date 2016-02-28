@@ -49,6 +49,7 @@ UIATarget.onAlert = function (alert) {
     return false;
 };
 
+
 UIATarget.prototype = {
     /**
      * Returns an object representing the machine that is host to the current target.

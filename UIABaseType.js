@@ -30,13 +30,13 @@ var Rect = function () {
 };
 
 Rect.prototype = {
+    /**
+     * @type {Point}
+     */
     origin: new Point,
+    /**
+     * @type {Size}
+     */
     size: new Size
 };
-
-
-
-
-
-
 

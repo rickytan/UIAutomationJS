@@ -51,43 +51,48 @@ var UIAElementNil = null;
  *     elements().firstWithName("1")
  *
  * @constructor
+ * @template T
  */
 var UIAElementArray = function () {
 
 };
 
 UIAElementArray.prototype = {
+    /**
+     * Number of elements
+     * @returns {Number}
+     */
     get length() {
         return 0;
     },
     /**
      * Returns the first element in the array with this name.
      * @param {String} name - A string whose value is the name of the element match on.
-     * @returns {UIAElement}
+     * @returns {T}
      */
     firstWithName: function (name) {
-        return new UIAElement;
+        return null;
     },
     /**
      * Returns the first element in the array matching the given criteria.
      * @param {String} predicateString - A predicate specifying the criteria to match.
-     * @returns {UIAElement}
+     * @returns {T}
      */
     firstWithPredicate: function (predicateString) {
-        return new UIAElement;
+        return null;
     },
     /**
      * Returns the first element in the array with a value that matches the property key.
      * @param {Object} value
      * @param {String} key
-     * @returns {UIAElement}
+     * @returns {T}
      */
     firstWithValueForKey: function (value, key) {
-        return new UIAElement;
+        return null;
     },
     /**
      * Converts the array into a standard JavaScript array.
-     * @returns {Array}
+     * @returns {Array.<T>}
      */
     toArray: function () {
         return [];
@@ -95,7 +100,7 @@ UIAElementArray.prototype = {
     /**
      * Returns all elements in the array with this name.
      * @param {String} name
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray.<T>}
      */
     withName: function (name) {
         return new UIAElementArray;
@@ -103,7 +108,7 @@ UIAElementArray.prototype = {
     /**
      * Returns all elements in the array matching the given.
      * @param predicateString
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray.<T>}
      */
     withPredicate: function (predicateString) {
         return new UIAElementArray;
@@ -112,7 +117,7 @@ UIAElementArray.prototype = {
      * Returns all elements in the array with a value that matches the property key.
      * @param {Object} value - A string specifying the value that the specified property, if it exists, should match.
      * @param {String} key - A string specifying the property to test for.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray.<T>}
      */
     withValueForKey: function (value, key) {
         return new UIAElementArray;

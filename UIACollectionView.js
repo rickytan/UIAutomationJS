@@ -9,14 +9,14 @@ var UIACollectionView = function() {
 UIACollectionView.prototype = UIAScrollView.prototype;
 /**
  * Returns an array of elements within the collection view.
- * @returns {UIAElementArray}
+ * @returns {UIAElementArray.<UICollectionCell>}
  */
 UIACollectionView.prototype.cells = function() {
     return new UIAElementArray;
 };
 /**
  * Returns an array visible elements within the collection view.
- * @returns {UIAElementArray}
+ * @returns {UIAElementArray.<UICollectionCell>}
  */
 UIACollectionView.prototype.visibleCells = function() {
     return new UIAElementArray();

@@ -24,7 +24,7 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of the activity indicators contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIActivityIndicator>}
      */
     activityIndicators: function () {
         return new UIAElementArray;
@@ -38,42 +38,42 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array containing the parents of the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray.<UIAElement>}
      */
     ancestry: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of buttons contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray.<UIAButton>}
      */
     buttons: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of collection views contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray.<UIACollectionView>}
      */
     collectionViews: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of elements contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray.<UIAElement>}
      */
     elements: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of images contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray.<UIAElement>}
      */
     images: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of links contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIALink>}
      */
     links: function () {
         return new UIAElementArray;
@@ -87,7 +87,7 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of navigation bar objects contained by this object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIANavigationBar>}
      */
     navigationBars: function () {
         return new UIAElementArray;
