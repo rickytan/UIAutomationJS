@@ -54,7 +54,11 @@ var UIAElementNil = null;
  * @template T
  */
 var UIAElementArray = function () {
-
+    /**
+     * @type {Array.<T>}
+     * @private
+     */
+    this._storage = [];
 };
 
 UIAElementArray.prototype = {
@@ -71,7 +75,7 @@ UIAElementArray.prototype = {
      * @returns {T}
      */
     firstWithName: function (name) {
-        return null;
+        return this._storage[0];
     },
     /**
      * Returns the first element in the array matching the given criteria.
@@ -79,7 +83,7 @@ UIAElementArray.prototype = {
      * @returns {T}
      */
     firstWithPredicate: function (predicateString) {
-        return null;
+        return this._storage[0];
     },
     /**
      * Returns the first element in the array with a value that matches the property key.
@@ -88,14 +92,14 @@ UIAElementArray.prototype = {
      * @returns {T}
      */
     firstWithValueForKey: function (value, key) {
-        return null;
+        return this._storage[0];
     },
     /**
      * Converts the array into a standard JavaScript array.
      * @returns {Array.<T>}
      */
     toArray: function () {
-        return [];
+        return this._storage;
     },
     /**
      * Returns all elements in the array with this name.
