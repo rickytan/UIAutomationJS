@@ -18,7 +18,11 @@ This Repo is just a javascript code stub, all the implementations are empty, it 
    
     ![Custom Library](https://github.com/rickytan/UIAutomationJS/blob/screenshot/images/s1.png?raw=true)
    
-3. Click **OK**!
+3. Click **OK**
+   
+4. And finally, don't forget to **Enable** it in your _UI Test_ project.
+
+​	![Enable](https://github.com/rickytan/UIAutomationJS/blob/screenshot/images/s1.png?raw=true)
 
 Now is should work!
 
