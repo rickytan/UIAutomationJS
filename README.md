@@ -21,8 +21,7 @@ This Repo is just a javascript code stub, all the implementations are empty, it 
 3. Click **OK**
    
 4. And finally, don't forget to **Enable** it in your _UI Test_ project.
-
-​	![Enable](https://github.com/rickytan/UIAutomationJS/blob/screenshot/images/s1.png?raw=true)
+   
+    ![Enable](https://github.com/rickytan/UIAutomationJS/blob/screenshot/images/s2.png?raw=true)
 
 Now is should work!
-
