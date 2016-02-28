@@ -5,4 +5,5 @@
 var UIATableGroup = function () {
 
 };
+
 UIATableGroup.prototype = UIAElement.prototype;

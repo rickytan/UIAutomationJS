@@ -65,14 +65,14 @@ UIAApplication.prototype = {
     /**
      * Returns the app’s navigation bar.
      * @param {String} key - The key representing the preference to be set.
-     * @returns {Object}
+     * @returns {*}
      */
     preferencesValueForKey: function(key) {
         return {};
     },
     /**
      * Sets the value of a specified app user preference.
-     * @param (Object) value - The new value to set for the specified preference.
+     * @param {*} value - The new value to set for the specified preference.
      * @param {String} key - The key representing the preference to be set.
      */
     setPreferencesValueForKey: function(value, key) {},
@@ -106,7 +106,7 @@ UIAApplication.prototype = {
     },
     /**
      * Returns an array of objects representing the app’s windows.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIAWindow>}
      */
     windows: function() {
         return new UIAElementArray;

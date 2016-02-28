@@ -1,5 +1,8 @@
 "use strict";
 
+/**
+ * @const
+ */
 var DEVICE_ORIENTATION = {
     UIA_DEVICE_ORIENTATION_UNKNOWN: 0,
     UIA_DEVICE_ORIENTATION_PORTRAIT: 1,
@@ -28,6 +31,7 @@ var UIATarget = function () {
 
 /**
  * Returns an object representing the system under test (SUT).
+ * @static
  * @returns {UIATarget}
  */
 UIATarget.localTarget = function () {
@@ -37,6 +41,8 @@ UIATarget.localTarget = function () {
 /**
  * Called by UI Automation to allow your script to respond to alerts.
  * @param {UIAAlert} alert - An object representing the alert encountered.
+ * @type {Function}
+ * @static
  * @returns {Boolean} - Returns true if successful. Returns false to cause the default alert handler to run.
  */
 UIATarget.onAlert = function (alert) {
@@ -111,17 +117,15 @@ UIATarget.prototype = {
     /**
      * Changes the device orientation to the specified new deviceOrientation value.
      * @param {Number} orientation
-     * @returns {undefined}
      */
     setDeviceOrientation: function (orientation) {
-
     },
     /**
      * Specifies a change in device’s latitude and longitude.
-     * @param {Object} coordinates - {
-     *   latitude: {Number},
-     *   longitude: {Number}
-     * }
+     * @param {{
+     *   latitude: Number,
+     *   longitude: Number
+     * }} coordinates
      * @returns {Boolean}
      */
     setLocation: function (coordinates) {
@@ -129,17 +133,17 @@ UIATarget.prototype = {
     },
     /**
      * Specifies a change in the device’s latitude, longitude, and other characteristics.
-     * @param {Object} coordinates - {
-     *   latitude: {Number},
-     *   longitude: {Number}
-     * }
-     * @param {Object} options - {
-     *   altitude: {Number},
-     *   horizontalAccuracy: {Number},
-     *   verticalAccuracy: {Number},
-     *   course: {Number},
-     *   speed: {Number}
-     * }
+     * @param {{
+     *   latitude: Number,
+     *   longitude: Number
+     * }} coordinates
+     * @param {{
+     *   altitude: Number,
+     *   horizontalAccuracy: Number,
+     *   verticalAccuracy: Number,
+     *   course: Number,
+     *   speed: Number
+     * }} options
      * @returns {Boolean}
      */
     setLocationWithOptions: function (coordinates, options) {
@@ -147,61 +151,53 @@ UIATarget.prototype = {
     },
     /**
      * Presses the volume down hardware button.
-     * @returns {undefined}
      */
     clickVolumeDown: function () {
     },
     /**
      * Presses the volume up hardware button.
-     * @returns {undefined}
      */
     clickVolumeUp: function () {
     },
     /**
      * Holds down the volume down hardware button for the specified duration.
      * @param {Number} duration
-     * @returns {undefined}
      */
     holdVolumeDown: function (duration) {
     },
     /**
      * Presses and holds the volume up hardware button for the specified duration.
      * @param {Number} duration
-     * @returns {undefined}
      */
     holdVolumeUp: function (duration) {
     },
     /**
      * Locks the device, using a lock event, for the specified duration.
      * @param {Number} duration
-     * @returns {undefined}
      */
     lockForDuration: function (duration) {
     },
     /**
      * Locks the device, using a lock event.
-     * @returns {undefined}
      */
     lock: function () {
     },
     /**
      * Simulates a shake action on the device. The shake action triggers a UIEvent of
      * type UIEventSubtypeMotionShake, but does not affect the accelerometer itself.
-     * @returns {undefined}
      */
     shake: function () {
     },
     /**
      * Unlocks the device using an unlock event followed by a drag of the slider.
-     * @returns {undefined}
      */
     unlock: function () {
     },
     /**
      * Drags from a specified starting screen location to a specified ending
      * screen location, for a specified length of time.
-     * @param {Point} fromPointObject - The rect or point from which the drag action is to begin.
-     * @param {Point} toPointObject - The rect or point at which the drag action is to end.
+     * @param {(Rect|Point)} fromPointObject - The rect or point from which the drag action is to begin.
+     * @param {(Rect|Point)} toPointObject - The rect or point at which the drag action is to end.
      * @param {Number} duration - The length of time, in seconds, between starting and stopping the gesture.
      * @returns
      */
@@ -209,77 +205,81 @@ UIATarget.prototype = {
     },
     /**
      * Double-taps the specified element or at the specified screen location.
-     * @param {Object} tapPointObject - A rect, point, or UIAElement.
-     * @returns
+     * @param {(Rect|Point|UIAElement)} tapPointObject - A rect, point, or UIAElement.
      */
     doubleTap: function (tapPointObject) {
     },
     /**
      * Flicks from the specified starting screen location to the specified ending screen location.
-     * @param {Point} fromPointObject - The rect or point from which the flick action is to begin.
-     * @param {Point} toPointObject - The rect or point at which the flick action is to end.
-     * @returns {undefined}
+     * @param {(Rect|Point)} fromPointObject - The rect or point from which the flick action is to begin.
+     * @param {(Rect|Point)} toPointObject - The rect or point at which the flick action is to end.
      */
     flickFromTo: function (fromPointObject, toPointObject) {
     },
     /**
      * Pinches (performs a pinch-close gesture) from a specified starting screen
      * location to a specified ending screen location, for a specified length of time.
-     * @param {Point} fromPointObject - The rect or point from which the pinch-close action is to begin.
-     * @param {Point} toPointObject - The rect or point at which the pinch-close action is to end.
+     * @param {(Rect|Point)} fromPointObject - The rect or point from which the pinch-close action is to begin.
+     * @param {(Rect|Point)} toPointObject - The rect or point at which the pinch-close action is to end.
      * @param {Number} duration - The length of time, in seconds, between starting and stopping the gesture.
-     * @returns {undefined}
      */
     pinchCloseFromToForDuration: function (fromPointObject, toPointObject, duration) {
     },
     /**
      * Stretches (performs a pinch-open gesture) from a specified starting screen
      * location to a specified ending screen location, for a specified length of time.
-     * @param {Point} fromPointObject - The rect or point from which the pinch-open action is to begin.
-     * @param {Point} toPointObject - The rect or point at which the pinch-open action is to end.
+     * @param {(Rect|Point)} fromPointObject - The rect or point from which the pinch-open action is to begin.
+     * @param {(Rect|Point)} toPointObject - The rect or point at which the pinch-open action is to end.
      * @param {Number} duration - The length of time, in seconds, between starting and stopping the gesture.
-     * @returns {undefined}
      */
     pinchOpenFromToForDuration: function (fromPointObject, toPointObject, duration) {
     },
     /**
      * Performs a rotation gesture at the specified location.
-     * @param {Object} location - The point object at center of the rotation gesture,
+     * @param {Point} location - The point object at center of the rotation gesture,
      * with properties for x and y, corresponding to the analogous CGPoint Cocoa structure.
      * The relevant coordinates are screen-relative and are adjusted to account
      * for device orientation.
-     * @param {Object} options - A dictionary that specifies characteristics of the rotation gesture. Valid keys are as follows:
+     * @param {{
+     *   duration: Number,
+     *   radius: Number,
+     *   rotation: Number,
+     *   touchCount: Number
+     * }} options - A dictionary that specifies characteristics of the rotation gesture. Valid keys are as follows:
      * * duration. The length of hold time, in seconds, for the specified gesture. The default duration value is 1.
      * * radius. The distance in points from the center to the edge of the circular path.
      * * rotation. The length of rotation in radians. The default is pi (π).
-     * * touchCount. The number of touches to use in the specified gesture (effectively, the number of fingers a user would use to make the specified gesture.) Valid values are 1 to 5. The default is 2.
+     * * touchCount. The number of touches to use in the specified gesture (effectively, the number of fingers a user
+     * would use to make the specified gesture.) Valid values are 1 to 5. The default is 2.
      * @returns {undefined}
      */
     rotateWithOptions: function (location, options) {
     },
     /**
      * Taps the specified element or the specified screen location.
-     * @param {Object} tapPointObject - A rect, point, or UIAElement.
-     * @returns {undefined}
+     * @param {(Rect|Point|UIAElement)} tapPointObject - A rect, point, or UIAElement.
      */
     tap: function (tapPointObject) {
     },
     /**
      * Taps the specified element with the specified options.
-     * @param {Object} tapPointObject - A rect, point, or UIAElement.
-     * @param {Object} options - A dictionary that specifies characteristics of the gesture. Valid keys are as follows:
+     * @param {(Rect|Point|UIAElement)} tapPointObject - A rect, point, or UIAElement.
+     * @param {{
+     *   tapCount: Number,
+     *   touchCount: Number,
+     *   duration: Number
+     * }} options - A dictionary that specifies characteristics of the gesture. Valid keys are as follows:
      * * tapCount. The number of taps that compose the specified gesture. The default value is 1 (single tap).
-     * * touchCount. The number of touches to use in the specified gesture. (Effectively, the number of fingers a user would use to make the specified gesture.) The default touch count value is 1.
+     * * touchCount. The number of touches to use in the specified gesture. (Effectively, the number of fingers a user
+     * would use to make the specified gesture.) The default touch count value is 1.
      * * duration. The length of hold time for the specified gesture. The default duration value for a tap is 0.
-     * @returns {undefined}
      */
     tapWithOptions: function (tapPointObject, options) {
     },
     /**
      * Touches the specified element, or the specified screen location, and holds for the specified duration.
-     * @param {Object} tapPointObject - A rect, point, or UIAElement.
+     * @param {(Rect|Point|UIAElement)} tapPointObject - A rect, point, or UIAElement.
      * @param {Number} duration - The length of time, in seconds, to hold the touch.
-     * @returns {undefined}
      */
     touchAndHold: function (tapPointObject, duration) {
     },
@@ -287,14 +287,12 @@ UIATarget.prototype = {
      * Takes a screen shot of the specified rectangular portion of the device screen.
      * @param {Rect} rect - The rect that defines the area of the screen to capture.
      * @param {String} imageName - A string to use as the name for the resultant image file.
-     * @returns {undefined}
      */
     captureRectWithName: function (rect, imageName) {
     },
     /**
      * Takes a screen shot of the entire device screen.
      * @param {String} imageName - A string to use as the name for the resultant image file
-     * @returns {undefined}
      */
     captureScreenWithName: function (imageName) {
     },
@@ -308,14 +306,12 @@ UIATarget.prototype = {
     /**
      * Stores the current timeout value on a stack and sets a new timeout value.
      * @param {Number} timeoutValue - The length of the grace period, in seconds.
-     * @returns {undefined}
      */
     pushTimeout: function (timeoutValue) {
     },
     /**
      * Sets a new timeout value.
      * @param {Number} timeout - A number representing the length,in seconds, of the grace period.
-     * @returns {undefined}
      */
     setTimeout: function (timeout) {
     },

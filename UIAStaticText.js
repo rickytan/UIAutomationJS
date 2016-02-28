@@ -5,3 +5,4 @@
 var UIAStaticText = function () {
 
 };
+UIAStaticText.prototype = UIAElement.prototype;

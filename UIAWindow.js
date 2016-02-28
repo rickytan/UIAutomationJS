@@ -24,7 +24,7 @@ UIAWindow.prototype.navigationBar = function () {
 };
 /**
  * Returns an array of the navigation bars contained by this object.
- * @returns {UIAElementArray}
+ * @returns {UIAElementArray<UIANavigationBar>}
  */
 UIAWindow.prototype.navigationBars = function () {
     return new UIAElementArray;
@@ -38,7 +38,7 @@ UIAWindow.prototype.tabBar = function () {
 };
 /**
  * Returns an array of tab bars contained by this object.
- * @returns {UIAElementArray}
+ * @returns {UIAElementArray<UIATabBar>}
  */
 UIAWindow.prototype.tabBars = function () {
     return new UIAElementArray;
@@ -52,7 +52,7 @@ UIAWindow.prototype.toolbar = function () {
 };
 /**
  * Returns an array of toolbars contained by this object.
- * @returns {UIAElementArray}
+ * @returns {UIAElementArray<UIAToolbar>}
  */
 UIAWindow.prototype.toolbars = function () {
     return new UIAElementArray;

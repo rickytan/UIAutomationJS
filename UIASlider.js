@@ -13,5 +13,4 @@ UIASlider.prototype = UIAElement.prototype;
  * @param {Number} value - The desired decimal value from 0 to 1, inclusive. A 0 value represents far left and a value of 1 represents far right.
  */
 UIASlider.prototype.dragToValue = function (value) {
-
 };

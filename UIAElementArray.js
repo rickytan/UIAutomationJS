@@ -11,6 +11,7 @@
  *    UIALogger.logError("Could not find 'Back' button!");
  * }
  * ```
+ * @const
  */
 var UIAElementNil = null;
 

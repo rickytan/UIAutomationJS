@@ -10,7 +10,7 @@ UIAKeyboard.prototype = UIAElement.prototype;
 
 /**
  * Returns an array representing the keys of the specified keyboard.
- * @returns {UIAElementArray}
+ * @returns {UIAElementArray<UIAKey>}
  */
 UIAKeyboard.prototype.keys = function () {
     return new UIAElementArray;
@@ -21,5 +21,4 @@ UIAKeyboard.prototype.keys = function () {
  * @param {String} string - The string to be typed on the keyboard.
  */
 UIAKeyboard.prototype.typeString = function (string) {
-
 };

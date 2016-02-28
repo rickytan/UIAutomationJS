@@ -94,7 +94,7 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of page indicators contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIAPageIndicator>}
      */
     pageIndicators: function () {
         return new UIAElementArray;
@@ -108,7 +108,7 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of picker objects contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIAPicker>}
      */
     pickers: function () {
         return new UIAElementArray;
@@ -122,56 +122,56 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of progress indicators contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIAProgressIndicator>}
      */
     progressIndicators: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of scroll views contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIAScrollView>}
      */
     scrollViews: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of search bars contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIASearchBar>}
      */
     searchBars: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of secure text fields contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIASecureTextField>}
      */
     secureTextFields: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of segmented controls contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIASegmentedControl>}
      */
     segmentedControls: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of sliders contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIASlider>}
      */
     sliders: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of static texts contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIAStaticText>}
      */
     staticTexts: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of switches contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIASwitch>}
      */
     switches: function () {
         return new UIAElementArray;
@@ -185,28 +185,28 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of tab bars contained by this object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIATabBar>}
      */
-    tarBars: function () {
+    tabBars: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of table views contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIATableView>}
      */
     tableViews: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of text fields contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIATextField>}
      */
     textFields: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of text views contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIATextView>}
      */
     textViews: function () {
         return new UIAElementArray;
@@ -220,14 +220,14 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of toolbars contained by this object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIAToolbar>}
      */
     toolbars: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of web views contained by the specified object.
-     * @returns {UIAElementArray}
+     * @returns {UIAElementArray<UIAWebView>}
      */
     webViews: function () {
         return new UIAElementArray;
@@ -239,7 +239,12 @@ UIAElement.prototype = {
     },
     /**
      * Drags within the bounds of an element.
-     * @param {Object} options - A dictionary that specifies characteristics of the gesture. Valid keys are as follows:
+     * @param {{
+     *   touchCount: Number,
+     *   duration: Number,
+     *   startOffset: Point,
+     *   endOffset: Point
+     * }} options - A dictionary that specifies characteristics of the gesture. Valid keys are as follows:
      * * touchCount. The number of touches to use in the specified gesture. (Effectively, the number of fingers a user
      * would use to make the specified gesture.) The default touch count value is 1.
      * * duration. The length of hold time for the specified gesture. The default duration value for a tap is 0.
@@ -253,7 +258,11 @@ UIAElement.prototype = {
     },
     /**
      * Flicks within the bounds of an element.
-     * @param {Object} options - A dictionary that specifies characteristics of the gesture. Valid keys are as follows:
+     * @param {{
+     *   touchCount: Number,
+     *   startOffset: Point,
+     *   endOffset: Point
+     * }} options - A dictionary that specifies characteristics of the gesture. Valid keys are as follows:
      * * touchCount. The number of touches to use in the specified gesture. (Effectively, the number of fingers a user
      * would use to make the specified gesture.) The default touch count value is 1.
      * * startOffset. The first offset to use for a multiple-point gesture. The default value is {x:0.0, y:0.0}.
@@ -265,7 +274,13 @@ UIAElement.prototype = {
     },
     /**
      * Perform a rotation gesture centered on the specified element.
-     * @param {Object} options - A dictionary that specifies characteristics of the rotation gesture. Valid keys are as follows:
+     * @param {{
+     *   centerOffest: Point,
+     *   duration: Number,
+     *   radius: Number,
+     *   roration: Number,
+     *   touchCount: Number
+     * }} options - A dictionary that specifies characteristics of the rotation gesture. Valid keys are as follows:
      * * centerOffset. The offset to use for the center of the rotate gesture. The default offset value is {x:0.0, y:0.0}.
      * * duration. The length of hold time for the specified gesture, in seconds. The default duration value is 1.
      * * radius. The distance in points from the center to the edge of the circular path.
@@ -287,7 +302,12 @@ UIAElement.prototype = {
     },
     /**
      * Performs the specified gesture on the specified element using a dictionary to specify gesture attributes.
-     * @param {Object} options - A dictionary that specifies characteristics of the gesture. Valid keys are as follows:
+     * @param {{
+     *   tapCount: Number,
+     *   touchCount: Number,
+     *   duration: Number,
+     *   tapOffset: Point
+     * }} options - A dictionary that specifies characteristics of the gesture. Valid keys are as follows:
      * * tapCount. The number of taps that compose the specified gesture. The default value is 1 (single tap).
      * * touchCount. The number of touches to use in the specified gesture. (Effectively, the number of fingers a user
      * would use to make the specified gesture.) The default touch count value is 1.
