@@ -12,11 +12,11 @@ This Repo is just a javascript code stub, all the implementations are empty, it 
 
 1. Open **[WebStorm](https://www.jetbrains.com/webstorm/)** `Preferences` => `Languages & Frameworks` => `JavaScropt` => `Libraries`
    
-    ![]()
+    ![Preference](https://github.com/rickytan/UIAutomationJS/blob/screenshot/images/s0.png?raw=true)
    
 2. Click **Add** button on the right, input _name_, then click **+** to **Attach Directories**
    
-    ![]()
+    ![Custom Library](https://github.com/rickytan/UIAutomationJS/blob/screenshot/images/s1.png?raw=true)
    
 3. Click **OK**!
 
