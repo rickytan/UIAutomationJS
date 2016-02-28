@@ -1,0 +1,8 @@
+{
+    "name": "UIAutomationJS",
+    "version": "0.1.0",
+    "keywords": ["util", "automation", "instruments"],
+    "author": "Ricky Tan<ricky.tan.xin@gmail.com>",
+    "contributors": [],
+    "dependencies": {}
+}
