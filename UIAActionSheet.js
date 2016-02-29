@@ -1,6 +1,7 @@
 /**
  * The UIAActionSheet class allows access to, and control of, action sheets within your app.
  * @constructor
+ * @extends UIAElement
  */
 var UIAActionSheet = function() {
 

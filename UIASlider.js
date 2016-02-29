@@ -1,6 +1,7 @@
 /**
  * The UIASlider class allows access to, and control of, slider elements in your app.
  * @constructor
+ * @extends UIAElement
  */
 var UIASlider = function () {
 

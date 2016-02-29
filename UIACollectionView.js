@@ -1,6 +1,7 @@
 /**
  * The UIACollectionView class allows access to, and control of, elements within a collection view in your app.
  * @constructor
+ * @extends UIAScrollView
  */
 var UIACollectionView = function() {
 

@@ -1,6 +1,7 @@
 "use strict";
 
 /**
+ * @enum {Number}
  * @const
  */
 var DEVICE_ORIENTATION = {

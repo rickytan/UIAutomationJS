@@ -1,6 +1,7 @@
 /**
  * The UIASegmentedControl class allows access to, and control of, elements within segmented controls in your app.
  * @constructor
+ * @extends UIAElement
  */
 var UIASegmentedControl = function () {
 

@@ -1,6 +1,7 @@
 /**
  * The UIAAlert class allows access to, and control of, alerts within your app.
  * @constructor
+ * @extends UIAElement
  */
 var UIAAlert = function () {
 

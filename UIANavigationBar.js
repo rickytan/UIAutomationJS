@@ -1,6 +1,7 @@
 /**
  * The UIANavigationBar class allows access to, and control of, buttons in your app’s navigation bar.
  * @constructor
+ * @extends UIAElement
  */
 var UIANavigationBar = function () {
 

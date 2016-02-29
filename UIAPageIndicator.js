@@ -1,6 +1,7 @@
 /**
  * The UIAPageIndicator class allows access to, and control of, page indicator elements in your app.
  * @constructor
+ * @extends UIAElement
  */
 var UIAPageIndicator = function () {
 

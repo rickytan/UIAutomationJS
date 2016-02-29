@@ -1,6 +1,7 @@
 /**
  * The UIASwitch class allows access to, and control of, switch elements in your app.
  * @constructor
+ * @extends UIAElement
  */
 var UIASwitch = function () {
 

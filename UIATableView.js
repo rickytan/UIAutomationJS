@@ -1,6 +1,7 @@
 /**
  * The UIATableView class allows access to, and control of, elements within a table view in your app.
  * @constructor
+ * @extends UIAScrollView
  */
 var UIATableView = function () {
 

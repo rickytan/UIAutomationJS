@@ -1,6 +1,7 @@
 /**
  * The UIAKeyboard class allows access to, and control of, elements within your app’s keyboard.
  * @constructor
+ * @extends UIAElement
  */
 var UIAKeyboard = function () {
 

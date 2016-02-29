@@ -1,6 +1,7 @@
 /**
  * The UIAScrollView class allows access to, and control of, the elements of a scroll view.
  * @constructor
+ * @extends UIAElement
  */
 var UIAScrollView = function () {
 

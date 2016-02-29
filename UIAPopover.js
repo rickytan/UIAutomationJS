@@ -1,6 +1,7 @@
 /**
  * The UIAPopover class provides methods for accessing and manipulating popovers and the elements they contain.
  * @constructor
+ * @extends UIAElement
  */
 var UIAPopover = function () {
 

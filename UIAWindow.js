@@ -1,6 +1,7 @@
 /**
  * The UIAWindow class allows access to, and control of, your app’s window elements.
  * @constructor
+ * @extends UIAElement
  */
 var UIAWindow = function () {
 
@@ -24,7 +25,7 @@ UIAWindow.prototype.navigationBar = function () {
 };
 /**
  * Returns an array of the navigation bars contained by this object.
- * @returns {UIAElementArray<UIANavigationBar>}
+ * @returns {UIAElementArray.<UIANavigationBar>}
  */
 UIAWindow.prototype.navigationBars = function () {
     return new UIAElementArray;
@@ -38,7 +39,7 @@ UIAWindow.prototype.tabBar = function () {
 };
 /**
  * Returns an array of tab bars contained by this object.
- * @returns {UIAElementArray<UIATabBar>}
+ * @returns {UIAElementArray.<UIATabBar>}
  */
 UIAWindow.prototype.tabBars = function () {
     return new UIAElementArray;
@@ -52,7 +53,7 @@ UIAWindow.prototype.toolbar = function () {
 };
 /**
  * Returns an array of toolbars contained by this object.
- * @returns {UIAElementArray<UIAToolbar>}
+ * @returns {UIAElementArray.<UIAToolbar>}
  */
 UIAWindow.prototype.toolbars = function () {
     return new UIAElementArray;

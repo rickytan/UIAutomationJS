@@ -1,6 +1,7 @@
 /**
  * The UIAActivityView class allows access to, and control of, activity views within your app.
  * @constructor
+ * @extends UIAElement
  */
 var UIAActivityView = function() {
 

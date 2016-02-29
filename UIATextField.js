@@ -1,6 +1,7 @@
 /**
  * The UIATextField class allows access to, and control of, text field elements in your app.
  * @constructor
+ * @extends UIAElement
  */
 var UIATextField = function () {
 

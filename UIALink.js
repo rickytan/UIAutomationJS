@@ -1,6 +1,7 @@
 /**
  * The UIALink class allows access to, and control of, link elements.
  * @constructor
+ * @extends UIAElement
  */
 var UIALink = function () {
 

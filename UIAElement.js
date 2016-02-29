@@ -24,7 +24,7 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of the activity indicators contained by the specified object.
-     * @returns {UIAElementArray<UIActivityIndicator>}
+     * @returns {UIAElementArray.<UIActivityIndicator>}
      */
     activityIndicators: function () {
         return new UIAElementArray;
@@ -73,7 +73,7 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of links contained by the specified object.
-     * @returns {UIAElementArray<UIALink>}
+     * @returns {UIAElementArray.<UIALink>}
      */
     links: function () {
         return new UIAElementArray;
@@ -87,14 +87,14 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of navigation bar objects contained by this object.
-     * @returns {UIAElementArray<UIANavigationBar>}
+     * @returns {UIAElementArray.<UIANavigationBar>}
      */
     navigationBars: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of page indicators contained by the specified object.
-     * @returns {UIAElementArray<UIAPageIndicator>}
+     * @returns {UIAElementArray.<UIAPageIndicator>}
      */
     pageIndicators: function () {
         return new UIAElementArray;
@@ -108,7 +108,7 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of picker objects contained by the specified object.
-     * @returns {UIAElementArray<UIAPicker>}
+     * @returns {UIAElementArray.<UIAPicker>}
      */
     pickers: function () {
         return new UIAElementArray;
@@ -122,56 +122,56 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of progress indicators contained by the specified object.
-     * @returns {UIAElementArray<UIAProgressIndicator>}
+     * @returns {UIAElementArray.<UIAProgressIndicator>}
      */
     progressIndicators: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of scroll views contained by the specified object.
-     * @returns {UIAElementArray<UIAScrollView>}
+     * @returns {UIAElementArray.<UIAScrollView>}
      */
     scrollViews: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of search bars contained by the specified object.
-     * @returns {UIAElementArray<UIASearchBar>}
+     * @returns {UIAElementArray.<UIASearchBar>}
      */
     searchBars: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of secure text fields contained by the specified object.
-     * @returns {UIAElementArray<UIASecureTextField>}
+     * @returns {UIAElementArray.<UIASecureTextField>}
      */
     secureTextFields: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of segmented controls contained by the specified object.
-     * @returns {UIAElementArray<UIASegmentedControl>}
+     * @returns {UIAElementArray.<UIASegmentedControl>}
      */
     segmentedControls: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of sliders contained by the specified object.
-     * @returns {UIAElementArray<UIASlider>}
+     * @returns {UIAElementArray.<UIASlider>}
      */
     sliders: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of static texts contained by the specified object.
-     * @returns {UIAElementArray<UIAStaticText>}
+     * @returns {UIAElementArray.<UIAStaticText>}
      */
     staticTexts: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of switches contained by the specified object.
-     * @returns {UIAElementArray<UIASwitch>}
+     * @returns {UIAElementArray.<UIASwitch>}
      */
     switches: function () {
         return new UIAElementArray;
@@ -185,28 +185,28 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of tab bars contained by this object.
-     * @returns {UIAElementArray<UIATabBar>}
+     * @returns {UIAElementArray.<UIATabBar>}
      */
     tabBars: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of table views contained by the specified object.
-     * @returns {UIAElementArray<UIATableView>}
+     * @returns {UIAElementArray.<UIATableView>}
      */
     tableViews: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of text fields contained by the specified object.
-     * @returns {UIAElementArray<UIATextField>}
+     * @returns {UIAElementArray.<UIATextField>}
      */
     textFields: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of text views contained by the specified object.
-     * @returns {UIAElementArray<UIATextView>}
+     * @returns {UIAElementArray.<UIATextView>}
      */
     textViews: function () {
         return new UIAElementArray;
@@ -220,14 +220,14 @@ UIAElement.prototype = {
     },
     /**
      * Returns an array of toolbars contained by this object.
-     * @returns {UIAElementArray<UIAToolbar>}
+     * @returns {UIAElementArray.<UIAToolbar>}
      */
     toolbars: function () {
         return new UIAElementArray;
     },
     /**
      * Returns an array of web views contained by the specified object.
-     * @returns {UIAElementArray<UIAWebView>}
+     * @returns {UIAElementArray.<UIAWebView>}
      */
     webViews: function () {
         return new UIAElementArray;

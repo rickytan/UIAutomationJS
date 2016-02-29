@@ -1,6 +1,7 @@
 /**
  * The UIAPickerWheel class allows access to, and control of, wheel elements within a picker.
  * @constructor
+ * @extends UIAPicker
  */
 var UIAPickerWheel = function () {
 

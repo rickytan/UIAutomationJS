@@ -1,6 +1,7 @@
 /**
  * The UIATextView class allows access to, and control of, text view elements in your app.
  * @constructor
+ * @extends UIAElement
  */
 var UIATextView = function () {
 

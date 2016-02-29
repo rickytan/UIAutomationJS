@@ -1,6 +1,7 @@
 /**
  * The UIATabBar class allows access to, and control of, elements within your app’s tab bar
  * @constructor
+ * @extends UIAElement
  */
 var UIATabBar = function () {
 
