@@ -64,11 +64,10 @@ var UIAElementArray = function () {
 UIAElementArray.prototype = {
     /**
      * Number of elements
-     * @returns {Number}
+     * @type {Number}
+     * @const
      */
-    get length() {
-        return 0;
-    },
+    length: 0,
     /**
      * Returns the first element in the array with this name.
      * @param {String} name - A string whose value is the name of the element match on.
