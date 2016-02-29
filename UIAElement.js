@@ -241,11 +241,11 @@ UIAElement.prototype.doubleTap = function () {
 /**
  * Drags within the bounds of an element.
  * @param {{
-     *   UIAElement.prototype.touchCount = Number,
-     *   UIAElement.prototype.duration = Number,
-     *   UIAElement.prototype.startOffset = Point,
-     *   UIAElement.prototype.endOffset = Point
-     * }} options - A dictionary that specifies characteristics of the gesture. Valid keys are as UIAElement.prototype.follows =
+ *   UIAElement.prototype.touchCount = Number,
+ *   UIAElement.prototype.duration = Number,
+ *   UIAElement.prototype.startOffset = Point,
+ *   UIAElement.prototype.endOffset = Point
+ * }} options - A dictionary that specifies characteristics of the gesture. Valid keys are as UIAElement.prototype.follows =
  * * touchCount. The number of touches to use in the specified gesture. (Effectively, the number of fingers a user
  * would use to make the specified gesture.) The default touch count value is 1.
  * * duration. The length of hold time for the specified gesture. The default duration value for a tap is 0.
@@ -260,10 +260,10 @@ UIAElement.prototype.dragInsideWithOptions = function (options) {
 /**
  * Flicks within the bounds of an element.
  * @param {{
-     *   UIAElement.prototype.touchCount = Number,
-     *   UIAElement.prototype.startOffset = Point,
-     *   UIAElement.prototype.endOffset = Point
-     * }} options - A dictionary that specifies characteristics of the gesture. Valid keys are as UIAElement.prototype.follows =
+ *   UIAElement.prototype.touchCount = Number,
+ *   UIAElement.prototype.startOffset = Point,
+ *   UIAElement.prototype.endOffset = Point
+ * }} options - A dictionary that specifies characteristics of the gesture. Valid keys are as UIAElement.prototype.follows =
  * * touchCount. The number of touches to use in the specified gesture. (Effectively, the number of fingers a user
  * would use to make the specified gesture.) The default touch count value is 1.
  * * startOffset. The first offset to use for a multiple-point gesture. The default value is {UIAElement.prototype.x =0.0, UIAElement.prototype.y =0.0}.
@@ -276,12 +276,12 @@ UIAElement.prototype.flickInsideWithOptions = function (options) {
 /**
  * Perform a rotation gesture centered on the specified element.
  * @param {{
-     *   UIAElement.prototype.centerOffest = Point,
-     *   UIAElement.prototype.duration = Number,
-     *   UIAElement.prototype.radius = Number,
-     *   UIAElement.prototype.roration = Number,
-     *   UIAElement.prototype.touchCount = Number
-     * }} options - A dictionary that specifies characteristics of the rotation gesture. Valid keys are as UIAElement.prototype.follows =
+ *   UIAElement.prototype.centerOffest = Point,
+ *   UIAElement.prototype.duration = Number,
+ *   UIAElement.prototype.radius = Number,
+ *   UIAElement.prototype.roration = Number,
+ *   UIAElement.prototype.touchCount = Number
+ * }} options - A dictionary that specifies characteristics of the rotation gesture. Valid keys are as UIAElement.prototype.follows =
  * * centerOffset. The offset to use for the center of the rotate gesture. The default offset value is {UIAElement.prototype.x =0.0, UIAElement.prototype.y =0.0}.
  * * duration. The length of hold time for the specified gesture, in seconds. The default duration value is 1.
  * * radius. The distance in points from the center to the edge of the circular path.
@@ -304,11 +304,11 @@ UIAElement.prototype.tap = function () {
 /**
  * Performs the specified gesture on the specified element using a dictionary to specify gesture attributes.
  * @param {{
-     *   UIAElement.prototype.tapCount = Number,
-     *   UIAElement.prototype.touchCount = Number,
-     *   UIAElement.prototype.duration = Number,
-     *   UIAElement.prototype.tapOffset = Point
-     * }} options - A dictionary that specifies characteristics of the gesture. Valid keys are as UIAElement.prototype.follows =
+ *   UIAElement.prototype.tapCount = Number,
+ *   UIAElement.prototype.touchCount = Number,
+ *   UIAElement.prototype.duration = Number,
+ *   UIAElement.prototype.tapOffset = Point
+ * }} options - A dictionary that specifies characteristics of the gesture. Valid keys are as UIAElement.prototype.follows =
  * * tapCount. The number of taps that compose the specified gesture. The default value is 1 (single tap).
  * * touchCount. The number of touches to use in the specified gesture. (Effectively, the number of fingers a user
  * would use to make the specified gesture.) The default touch count value is 1.
